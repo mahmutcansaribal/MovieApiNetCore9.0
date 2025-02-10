@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3A6C4173-FFD7-42F0-B7CD-60D177483BA7}"
 EndProject
@@ -13,8 +13,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{633FFCB7-4C6B-44F9-ADC1-7CB99ABD2C52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Domain", "Core\MovieApi.Domain\MovieApi.Domain.csproj", "{8AF51867-6C77-4F72-ADFB-9636CB2CFBA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Persistence", "Infrastructure\MovieApi.Persistence\MovieApi.Persistence.csproj", "{991C4718-3BF8-414B-9171-5B4A65D9B100}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AF51867-6C77-4F72-ADFB-9636CB2CFBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AF51867-6C77-4F72-ADFB-9636CB2CFBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AF51867-6C77-4F72-ADFB-9636CB2CFBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AF51867-6C77-4F72-ADFB-9636CB2CFBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991C4718-3BF8-414B-9171-5B4A65D9B100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991C4718-3BF8-414B-9171-5B4A65D9B100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991C4718-3BF8-414B-9171-5B4A65D9B100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991C4718-3BF8-414B-9171-5B4A65D9B100}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AF51867-6C77-4F72-ADFB-9636CB2CFBA9} = {3A6C4173-FFD7-42F0-B7CD-60D177483BA7}
+		{991C4718-3BF8-414B-9171-5B4A65D9B100} = {303FE860-A82C-4DA7-90DF-B3516B30454B}
 	EndGlobalSection
 EndGlobal
