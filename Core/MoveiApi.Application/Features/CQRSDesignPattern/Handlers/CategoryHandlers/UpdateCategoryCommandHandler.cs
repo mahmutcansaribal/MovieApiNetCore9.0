@@ -4,26 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MoveiApi.Application.Features.CQRSDesignPattern.Commands.CategoryCommands;
-using MovieApi.Domain.Entities;
 using MovieApi.Persistence.Context;
 
 namespace MoveiApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers
 {
-    public class CreateCategoryCommandHandler
+    public class UpdateCategoryCommandHandler
     {
         private readonly MovieContext _context;
 
-        public CreateCategoryCommandHandler(MovieContext context)
+        public UpdateCategoryCommandHandler(MovieContext context)
         {
             _context = context;
         }
-
-        public async void Handle(CreateCategoryCommand command)
+        public async void Handle(UpdateCategoryCommand command)
         {
-            _context.Categories.Add(new Category
-            {
-                CategoryName = command.CategoryName,
-            });
+            var value = await _context.Categories.FindAsync(command.CategoryID);
+            value.CategoryName = command.CategoryName;
             await _context.SaveChangesAsync();
         }
     }
